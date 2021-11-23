@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+}
+
+.Content {
+  width: 400px;
+  border: 1px solid #f4f4f4;
+  margin: 30px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding: 8px;
+  row-gap: 15px;
+  .Body {
+    align-items: center;
+    display: flex;
+    justify-content: left;
+    column-gap: 8px;
+    &-content {
+      display: grid;
+      justify-items: left;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.Reaction {
+  width: 100%;
+  position: relative;
+  &-container {
+    width: 100%;
+  }
+
+  &-summary-container {
+    position: absolute;
+    z-index: 1;
+    left: 38px;
+
+    &.show {
+      visibility: visible;
+    }
+    &.hide {
+      visibility: hidden;
+    }
+  }
+
+  &-trigger-count {
+    display: flex;
+    column-gap: 6px;
+  }
+}
+
+.ReactionEmojiTriggerBtn {
+  width: var(--reaction-trigger-btn-width);
+  height: var(--reaction-trigger-btn-height);
+  border-radius: 50%;
+  background-color: var(--reaction-emoji-trigger-btn-bg-color);
+  border: var(--reaction-trigger-btn-border-width) solid
+    var(--reaction-emoji-trigger-btn-border-color);
+  cursor: pointer;
+
+  &-emoji {
+    width: var(--reaction-trigger-btn-emoji-width);
+    height: var(--reaction-trigger-btn-emoji-height);
+  }
+}
+
+.ReactionEmojis {
+  display: flex;
+  list-style: none;
+  background-color: var(--reaction-emoji-list-bg-color);
+  height: var(--reaction-emoji-list-height);
+  border-radius: var(--reaction-emoji-list-border-radius);
+  padding: var(--reaction-emoji-list-padding);
+  column-gap: 16px;
+  position: absolute;
+  bottom: 21px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
+  border: var(--reaction-emoji-list-border-width) solid
+    var(--reaction-emoji-list-border-color);
+  &-btn {
+    background-color: transparent;
+    border: none;
+    width: var(--reaction-emoji-list-item-width);
+    height: var(--reaction-emoji-list-item-height);
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover {
+      height: var(--reaction-emoji-list-item-height__hover);
+      transform-origin: bottom;
+      transform: scale(var(--reaction-emoji-list-item-scale-size));
+    }
+    .emoji {
+      font-size: var(--reaction-emoni-list-item-font-size);
+    }
+  }
+}
+
+.ReactedCounts {
+  display: flex;
+  column-gap: 6px;
+
+  &-btn {
+    height: var(--reaction-reacted-count-height);
+    border-radius: var(--reaction-reacted-count-border-radius);
+    background-color: var(--reaction-reacted-count-bg-color);
+    border: var(--reaction-reacted-count-border-width) solid
+      var(--reaction-reacted-count-border-color);
+    color: var(--reaction-reacted-count-text-color);
+    font-size: var(--reaction-reacted-count-font-size);
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    justify-content: center;
+    line-height: 32px;
+    padding: var(--reaciton-reacted-count-padding);
+    cursor: pointer;
+
+    &.active {
+      background-color: var(--reaction-reacted-count-bg-color__active);
+      border-color: var(--reaction-reacted-count-border-color__active);
+    }
+  }
+}
+
+.EmojiTooltip {
+  border-radius: var(--reaction-emoji-tooltip-border-radius) !important;
+  font-size: var(--reaction-emoji-tooltip-font-size) !important;
+  padding: var(--reaction-emoji-tooltip-padding) !important;
+  background-color: var(--reaction-emoji-tooltip-bg-color) !important;
+}

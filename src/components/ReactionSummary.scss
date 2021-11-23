@@ -1,0 +1,63 @@
+.ReactionSummary {
+  background-color: var(--reaciton-summary-bg-color);
+  font-size: var(--reaction-summary-font-size);
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.03);
+  border-radius: var(--reaction-summary-border-radius);
+
+  &-title {
+    font-weight: 600;
+    color: var(--reaction-summary-header-title-color);
+    padding: var(--reaction-summary-title-padding);
+    text-align: left;
+  }
+}
+
+.ReactionSummaryTab {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: var(--reaction-summary-tab-height);
+  color: var(--reaction-summary-tab-text-color);
+  padding: 0;
+  margin: 0;
+  &-item {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding: var(--reaction-summary-tab-padding);
+    border-bottom: var(--reaction-summary-tab-border-width) solid
+      var(--reaction-summary-tab-border-color);
+    cursor: pointer;
+    column-gap: 5px;
+    &.active {
+      border-color: var(--reaciton-summary-tab-border-color__active);
+      //   TODO highlight has to be handled
+      -webkit-text-fill-color: var(--reaction-summary-tab-text-color__active);
+      -webkit-text-stroke-width: 0.5px;
+      -webkit-text-stroke-color: var(--reaction-summary-tab-text-color__active);
+    }
+  }
+}
+
+.ReactionSummaryDetails {
+  padding: var(--reaciton-summary-item-padding);
+  display: flex;
+  flex-flow: column;
+  row-gap: 7px;
+  max-height: var(--reaction-summary-item-container-height);
+  overflow: auto;
+  &-item {
+    color: var(--reaction-summary-item-text-color);
+    display: flex;
+    align-items: center;
+    .user-avatar {
+      width: var(--reaction-summary-item-user-avatar-width);
+      height: var(--reaction-summary-item-user-avatar-height);
+      border-radius: 50%;
+      margin-right: 14px;
+    }
+    .user-reacted-emoji {
+      margin-right: 6px;
+    }
+  }
+}

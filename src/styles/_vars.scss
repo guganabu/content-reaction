@@ -1,0 +1,77 @@
+$white: #fff;
+$black: #000;
+
+:root {
+  --white: #{$white};
+  --black: #{$black};
+}
+
+body {
+  // Colors
+  --reaction-emoji-tooltip-bg-color: #161616;
+
+  --reaction-emoji-trigger-btn-bg-color: #edeef0;
+  --reaction-emoji-trigger-btn-border-color: #e0e0e0;
+
+  --reaction-emoji-list-bg-color: var(--white);
+  --reaction-emoji-list-border-color: #e0e0e0;
+
+  --reaction-reacted-count-bg-color: #e0e0e0;
+  --reaction-reacted-count-border-color: var(--reaction-reacted-count-bg-color);
+  --reaction-reacted-count-text-color: #525252;
+  --reaction-reacted-count-bg-color__active: #edf5ff;
+  --reaction-reacted-count-border-color__active: #0f62fe;
+
+  --reaciton-summary-bg-color: var(--white);
+  --reaction-summary-header-title-color: var(--black);
+  --reaction-summary-tab-text-color: var(--black);
+  --reaction-summary-tab-border-color: #e0e0e0;
+  --reaciton-summary-tab-border-color__active: #0f62fe;
+  --reaction-summary-tab-text-color__active: var(--black);
+
+  --reaction-summary-item-text-color: var(--black);
+
+  // Styling
+
+  --reaction-trigger-btn-width: 32px;
+  --reaction-trigger-btn-height: var(--reaction-trigger-btn-width);
+  --reaction-trigger-btn-border-width: 1px;
+  --reaction-trigger-btn-emoji-width: 16px;
+  --reaction-trigger-btn-emoji-height: var(--reaction-trigger-btn-emoji-width);
+
+  --reaction-emoji-list-height: 32px;
+  --reaction-emoji-list-border-radius: 24px;
+  --reaction-emoji-list-border-width: 1px;
+  --reaction-emoji-list-padding: 0 20px;
+
+  --reaction-emoji-list-item-width: 16px;
+  --reaction-emoji-list-item-height: var(--reaction-emoji-list-height);
+  --reaction-emoji-list-item-height__hover: 20px;
+  --reaction-emoji-list-item-scale-size: 2;
+  --reaction-emoni-list-item-font-size: 16px;
+
+  --reaction-reacted-count-height: 32px;
+  --reaction-reacted-count-border-radius: 21px;
+  --reaction-reacted-count-border-width: 1px;
+  --reaction-reacted-count-font-size: 14px;
+  --reaciton-reacted-count-padding: 8px;
+
+  --reaction-emoji-tooltip-border-radius: 2px;
+  --reaction-emoji-tooltip-font-size: 12px;
+  --reaction-emoji-tooltip-padding: 12px 16px;
+
+  --reaction-summary-font-size: 14px;
+  --reaction-summary-border-radius: 2px;
+  --reaction-summary-title-padding: 16px 16px 8px 16px;
+  --reaction-summary-tab-height: 40px;
+  --reaction-summary-tab-padding: 0 16px;
+  --reaction-summary-tab-border-width: 2px;
+
+  --reaciton-summary-item-padding: 16px;
+  --reaction-summary-item-container-height: 300px;
+
+  --reaction-summary-item-user-avatar-width: 20px;
+  --reaction-summary-item-user-avatar-height: var(
+    --reaction-summary-item-user-avatar-width
+  );
+}
