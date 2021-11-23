@@ -113,12 +113,6 @@ function Reaction(props) {
     setReactedCounts([...reactedCounts]);
   }
 
-  // Method to toggle reaction summary data
-  const toggleReactionSummary = (state, reaction) => {
-    setShowReactionSummary(state);
-    setActiveSummaryTab(reaction.id);
-  };
-
   const ReactionEmojis = () => {
     return (
       <>
@@ -169,7 +163,10 @@ function Reaction(props) {
 
   const ReactedCounts = () => {
     return (
-      <div className="ReactedCounts">
+      <div
+        className="ReactedCounts"
+        onMouseLeave={() => setShowReactionSummary(false)}
+      >
         {reactedCounts.map(
           (reaction) =>
             reaction.count >= 1 && (
@@ -179,8 +176,10 @@ function Reaction(props) {
                 }`}
                 key={reaction.id}
                 onClick={() => onSelectReaction(reaction)}
-                onMouseOver={() => toggleReactionSummary(true, reaction)}
-                onMouseLeave={() => setShowReactionSummary(false)}
+                onMouseMove={() => {
+                  setActiveSummaryTab(reaction.id);
+                  setShowReactionSummary(true);
+                }}
                 data-for="reaction-summary"
               >
                 <span>{reaction.emoji}</span>
