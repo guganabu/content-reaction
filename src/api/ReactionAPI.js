@@ -1,26 +1,22 @@
 import axios from "axios";
 
+const BASE_URL = "https://artful-iudex.herokuapp.com";
+
 function getReactions() {
-  return axios.get("https://artful-iudex.herokuapp.com/reactions");
+  return axios.get(`${BASE_URL}/reactions`);
 }
 
 function getUserContentReactions(params) {
-  return axios.get(
-    "https://artful-iudex.herokuapp.com/user_content_reactions",
-    { params }
-  );
+  return axios.get(`${BASE_URL}/user_content_reactions`, { params });
 }
 
 function addUserContentReaction(params) {
-  return axios.post(
-    "https://artful-iudex.herokuapp.com/user_content_reactions",
-    { params }
-  );
+  return axios.post(`${BASE_URL}/user_content_reactions`, { params });
 }
 
-function deleteUserContentReaction(_uContentReactionId) {
+function deleteUserContentReaction(contentReactionId) {
   return axios.delete(
-    `https://artful-iudex.herokuapp.com/user_content_reactions/${_uContentReactionId}`
+    `${BASE_URL}/user_content_reactions/${contentReactionId}`
   );
 }
 export {
